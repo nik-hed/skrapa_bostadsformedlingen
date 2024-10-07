@@ -51,5 +51,3 @@ for i in all_listed_apartments:
 if found_apartments==1: #"Det finns BostadSnabbt/Bostadssnabben - lägenheter hos Bostadsförmedlingen"
      send_email()                
        
-
-# %%
