@@ -1,10 +1,6 @@
 # skrapa_bostadsformedlingen
 
-https://www.zyte.com/learn/web-scraping-best-practices/: 
-The first rule of scraping the web is: do not harm the website.
-
-The second rule of web crawling is: do NOT harm the website.
-
+https://www.zyte.com/learn/web-scraping-best-practices/
 
 Purpose is to search for apartments that has Bostadstyp = **'Bostad Snabbt'**
 
