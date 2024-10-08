@@ -3,8 +3,6 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
 
-
-
 """
 To configure and get password for email:
 Prior to May 30, 2022, it was possible to connect to Gmail’s SMTP server using your regular Gmail password if “2-step verification” was activated. For a higher security standard, Google now requires you to use an “App Password”.
@@ -17,11 +15,11 @@ def send_email():
 
 
     msg = MIMEMultipart()
-    password = "password-from_email"
-    msg['From'] = "from_email"
+    password = 'password-from_email'
+    msg['From'] = 'from_email'
     to_emails = ['email_1','email_2']   
     msg['To'] =', '.join(to_emails) 
-    msg['Subject'] = "Det finns lägenheter i Bostadssnabben hos Bostadsförmedlingen"
+    msg['Subject'] = 'Det finns lägenheter i Bostadssnabben hos Bostadsförmedlingen'
     #Email message:
     message='Klicka här:\r\r\nhttps://bostad.stockholm.se/bostad/?s=59.46450&n=59.47182&w=18.11195&e=18.13296&sort=annonserad-fran-desc&bostadSnabbt=1\r\r\n'  
     msg.attach(MIMEText(message, 'plain'))
@@ -34,7 +32,7 @@ def send_email():
     server.quit()
 
 
-url = "https://bostad.stockholm.se/AllaAnnonser/"
+url = 'https://bostad.stockholm.se/AllaAnnonser/'
     
     
 with urllib.request.urlopen(url) as url:
@@ -48,6 +46,6 @@ for i in all_listed_apartments:
 
         
         
-if found_apartments==1: #"Det finns BostadSnabbt/Bostadssnabben - lägenheter hos Bostadsförmedlingen"
+if found_apartments==1: #'Det finns BostadSnabbt/Bostadssnabben - lägenheter hos Bostadsförmedlingen'
      send_email()                
        
